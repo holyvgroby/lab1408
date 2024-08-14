@@ -61,13 +61,39 @@ public:
         cout << "obem ikr: " << obIkru << endl;
         
     }
-
+    void choice() {
+        int ab = 1;
+        while (ab != 0) {
+            cout << "che hosch? \n 1 - zapolnit \n 2 - foto \n 3 - galereya \n 4 - koment \n 5 - info \n 0 - exit" << endl;
+            cin >> ab;
+            switch (ab)
+            {
+            case 1:
+                zapolnit();
+                break;
+            case 2:
+                foto();
+                break;
+            case 3:
+                galereya();
+                break;
+            case 4:
+                koment();
+                break;
+            case 5:
+                info();
+                break;
+            case 0:
+                cout << "exit" << endl;
+                break;
+            default:
+                cout << "takogo nety" << endl;
+                break;
+            }
+        }
+    }
 };
 int main(){
     Gym man1(0, 0, 0, 0, 0, 0, 0, 0);
-    man1.zapolnit();
-    man1.foto();
-    man1.galereya();
-    man1.koment();
-    man1.info();
+    man1.choice();
 }
