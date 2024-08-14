@@ -3,6 +3,16 @@ using namespace std;
 class Gym {
 public:
     int waga, obGryd, obPlechi, obBiceps, obTalia, obNogi, obStegna, obIkru;
+    Gym(int w, int og, int op, int ob, int ot, int on, int os, int oi) {
+        waga = w;
+        obGryd = og;
+        obPlechi = op;
+        obBiceps = ob;
+        obTalia = ot;
+        obNogi = on;
+        obStegna = os;
+        obIkru = oi;
+    }
     void zapolnit() {
         cout << "waga? (dont say kilo ok?)" << endl;
         cin >> waga;
@@ -42,6 +52,7 @@ public:
     }
     void info() {
         cout << "waga: " << waga << endl;
+        cout << "obem grydeu: " << obGryd << endl;
         cout << "obem plecheu: " << obPlechi << endl;
         cout << "obem bicepsa: " << obBiceps << endl;
         cout << "obem talii: " << obTalia << endl;
@@ -50,8 +61,13 @@ public:
         cout << "obem ikr: " << obIkru << endl;
         
     }
+
 };
-int main()
-{
-    
+int main(){
+    Gym man1(0, 0, 0, 0, 0, 0, 0, 0);
+    man1.zapolnit();
+    man1.foto();
+    man1.galereya();
+    man1.koment();
+    man1.info();
 }
